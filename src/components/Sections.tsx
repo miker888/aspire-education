@@ -2,6 +2,7 @@ import Image from "next/image";
 import { site } from "@/content/site";
 import heroImg from "@/assets/hero.jpg";
 import studentsImg from "@/assets/students.jpg";
+import abbyImg from "@/assets/abby.jpg";
 import { ContactForm } from "./ContactForm";
 import { Icon, Star } from "./Icon";
 import { Logo } from "./Logo";
@@ -188,9 +189,11 @@ export function Founder() {
   return (
     <section id="founder" className="section">
       <div className="wrap split split--founder">
-        <div className="founder__photo">
-          <Icon name="user" size={44} strokeWidth={1.6} />
-          <span>[Photo of {f.name}]</span>
+        <div className="founder__media">
+          <div className="founder__photo">
+            <Image src={abbyImg} alt={`Portrait of ${f.name}, founder`} sizes="(max-width: 640px) 280px, 420px" />
+          </div>
+          <Star size={44} className="founder__star" />
         </div>
         <div className="stack-22">
           <p className="eyebrow">Meet the founder</p>
