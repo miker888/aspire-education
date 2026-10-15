@@ -12,7 +12,6 @@ import "./globals.css";
 import { site } from "@/content/site";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`),
@@ -23,7 +22,8 @@ export const metadata: Metadata = {
     description: site.metaDescription,
     type: "website",
     locale: "en_CA",
-    images: [{ url: `${basePath}/og.jpg`, width: 1200, height: 628, alt: site.name }],
+    // Relative to metadataBase, which already includes the base path.
+    images: [{ url: "og.jpg", width: 1200, height: 628, alt: site.name }],
   },
   twitter: { card: "summary_large_image" },
 };
