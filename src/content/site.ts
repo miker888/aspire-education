@@ -41,12 +41,6 @@ export const site = {
       detail: "[Program names · duration · format]",
     },
     {
-      icon: "globe",
-      title: "International students",
-      body: "Guidance for students coming to Canada, from choosing a program to preparing for your first term.",
-      detail: "[Partner schools · intake dates]",
-    },
-    {
       icon: "book",
       title: "Tutoring and test prep",
       body: "One-on-one and small-group support to raise grades and get ready for exams.",
