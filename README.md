@@ -37,5 +37,6 @@ Never put a secret or service-role key in this repo.
 `.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to `main`.
 In the repo settings, Pages → Source must be set to **GitHub Actions**.
 
-The demo lives at `https://<owner>.github.io/<repo>/`. When moving to a custom domain,
-remove `NEXT_PUBLIC_BASE_PATH` from the workflow and set `NEXT_PUBLIC_SITE_URL` to the domain.
+The site is served at https://aspireedu.ca (custom domain set in Settings → Pages).
+DNS at GoDaddy: four A records on `@` to GitHub Pages (185.199.108–111.153) and
+`www` as a CNAME to `miker888.github.io`.
